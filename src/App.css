@@ -1,10 +1,10 @@
 /*Загальні стилі*/
-p.aboutMe{
-    font-weight: bold;
-    font-size: xx-large;
-}
+
 img{
     width: 100%;
+}
+img.phAbout{
+    height: 100%;
 }
 img.socialIcon{
     width: 50px;
@@ -364,6 +364,7 @@ img.imgProfExp{
 .freelance{
     grid-area: freelance;
     text-align: center;
+
 }
 .portfolioOrganicImg {
     height: 370px;
@@ -458,26 +459,32 @@ textarea{
     }
     .logoLinkedIn{
         position: absolute;
-        margin-top: 15px;
-        padding-left: 30px;
-        width: 45px;
+        margin-top: 10px;
+        padding-left: 20px;
+        width: 35px;
     }
     .logoPhoto{
-        margin-top: 10px;
+        margin-top: 5px;
         position: absolute;
-        width: 45px;
+        width: 35px;
     }
     .nameText {
-        margin-top: 20px;
-        margin-left: 100px;
+        margin-top: 10px;
+        margin-left: 60px;
         color: white;
         font-family: "Arial";
-        font-size: xx-large;
+        font-size: large;
     }
     .photoHeader{
         grid-area: photoHeader;
     }
     .headerNavMenu{
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        background: #252d2f;
+    }
+    .ulNav{
         display: none;
     }
     .containerProfExperience{
@@ -587,7 +594,305 @@ textarea{
     }
 }
 
+@media (max-width: 750px) {
+    /*Голловне фото і навігація*/
+    .containerHome{
+        display: grid;
+        grid-template-areas:
+            'photoHeader';
+    }
+    img.hundred{
+        width: 100%;
+    }
+    /*Піктограми та імя на панелі навігації*/
+    .headerLogo{
+        float: left;
+    }
+    .logoLinkedIn{
+        position: absolute;
+        margin-top: 10px;
+        padding-left: 20px;
+        width: 35px;
+    }
+    .logoPhoto{
+        margin-top: 5px;
+        position: absolute;
+        width: 35px;
+    }
+    .nameText {
+        margin-top: 17px;
+        margin-left: 60px;
+        color: white;
+        font-family: "Arial";
+        font-size: large;
+    }
+    .photoHeader{
+        grid-area: photoHeader;
+    }
+    .headerNavMenu{
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        background: #252d2f;
+        padding-left: 30px;
 
+    }
+    .ulNav{
+        display: none;
+    }
+    .containerProfExperience{
+        display: grid;
+        grid-template-areas:
+                'profExperience'
+                'profExpDescribeFreelance'
+                'freelance'
+                'profExpDescribeOrganic'
+                'organic'
+                'profExpDescribeSql'
+                'sqlCertificate'
+                'profExpDescribeGreenHorn'
+                'greenHorn'
+                'profExpDescribeApplicationIOS'
+                'applicationIOS';
+        text-align: center;
+        padding-right: 0px;
+    }
+    .organic{
+        grid-area: organic;
+        padding-right: 0px;
+    }
+    /*Контейнер досвід*/
+    .profExpDescribeOrganic{
+        grid-area: profExpDescribeOrganic;
+
+    }
+    .profExpDescribeFreelance{
+        grid-area: profExpDescribeFreelance;
+    }
+    .profExpDescribeSql{
+        grid-area: profExpDescribeSql;
+    }
+    .profExpDescribeGreenHorn{
+        grid-area: profExpDescribeGreenHorn;
+    }
+    .profExpDescribeApplicationIOS {
+        grid-area: profExpDescribeApplicationIOS;
+
+    }
+    .profExperience{
+        grid-area: profExperience;
+        font-weight: bolder;
+        font-size: larger;
+        color: #2ecc71;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .applicationIOS{
+        text-align: center;
+        grid-area: applicationIOS;
+    }
+    img.imgProfExp{
+        width: 50%;
+        border-radius: unset;
+
+    }
+    .profExp{
+        grid-area: profExp;
+        margin-top: 200px;
+        font-weight: bolder;
+        font-size: large;
+        color: #2ecc71;
+        text-align: center;
+    }
+    .applicationIOSGap{
+        margin-bottom: 10px;
+    }
+    /*Контейнер досвід ОПИС*/
+    .ulProf {
+        list-style-type: none;
+        font-size: larger;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .liProfTitle{
+        font-weight: bold;
+        font-size: larger;
+    }
+    .liProfDescription{
+        font-size: large;
+    }
+    .liProfDesc{
+        font-size: larger;
+    }
+    .buttonProfExp{
+        margin-top: 20px;
+        width: auto;
+        height: 30px;
+        background-color: #2ecc71;
+        color: #f2f2f1;
+        font-size: large;
+        cursor: pointer;
+        border-color: #2ecc71;
+    }
+    .containerMyEducation{
+        display: grid;
+        grid-template-areas:
+                'photoMyEducation'
+                'myEducationInfo';
+    }
+    .photoMyEducation{
+        grid-area: photoMyEducation;
+    }
+    .myEducationInfo{
+        grid-area: myEducationInfo;
+        background-color: #f2f2f1;
+        text-align: center;
+    }
+    .ulEducation {
+        list-style-type: none;
+        font-size: large;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .liEducation  {
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    .liEducTitle{
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: large;
+        font-weight: bold;
+    }
+    .liEd{
+        margin-top: 10px;
+    }
+    .buttonEducation{
+        margin-top: 20px;
+        width: auto;
+        height: 35px;
+        font-size: small;
+    }
+    .containerSkills{
+        display: grid;
+        grid-template-areas:
+                'technologies'
+                'techDescrip1'
+                'techDescrip2'
+                'techDescrip3'
+                'devTools'
+                'devToolsDescrip1'
+                'devToolsDescrip2'
+                'devToolsDescrip3';
+        text-align: center;
+        width: 50%;
+    }
+
+    .containerTestimonials{
+        display: grid;
+        grid-template-areas:
+                'testimonialsPhoto'
+                'testimonialsInfo';
+        text-align: center;
+        width: 50%;
+    }
+    /*Контейнер відгуки ОПИС*/
+    .testimonialsInfo{
+        grid-area: testimonialsInfo;
+        background-color: #f2f2f1;
+        font-size: large;
+        font-style: italic;
+        padding: 20px;
+    }
+    .portfolioContent{
+        display: grid;
+        grid-template-areas:
+            'portfolioDescription'
+            'hublish'
+            'llook'
+            'greenHorn'
+            'digibarber'
+            'organic';
+        grid-gap: 10px;
+        text-align: center;
+        padding: 10px;
+        width: 50%;
+    }
+    .portfolioOrganicImg{
+        width: 40%;
+        height: 100%;
+        /*border-radius: 50%;*/
+    }
+    .imgPortfolioCircle{
+        width: 40%;
+        /*border-radius: 50%;*/
+    }
+    /*Контейнер портфоліо ОПИС*/
+    .portfolioDescription{
+        grid-area: portfolioDescription;
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: large;
+    }
+    .containerContactMe{
+        display: grid;
+        grid-template-areas:
+                'contactMe'
+                'contactMeForm'
+                'foot';
+        color: #4b5456;
+        font-size: small;
+        background-color: #252e30;
+        width: 50%;
+    }
+    .contactMe{
+        grid-area: contactMe;
+        color: #4b5456;
+        font-size: large;
+        text-align: center;
+        padding: 20px;
+    }
+    .ulContactMe {
+        list-style-type: none;
+        font-size: large;
+    }
+    .liContactMe.titleText {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .contactMeForm{
+        grid-area: contactMeForm;
+    }
+    form{
+    }
+    .buttonForm{
+        background-color: #191f21;
+        color: white;
+        margin-top: 50px;
+        width: 180px;
+        height: 80px;
+        font-size: small;
+        cursor: pointer;
+        border-color: #191f21;
+    }
+    .buttonForm2{
+        text-align: center;
+    }
+    /*Контейнер футер*/
+    .containerFoot{
+        display: grid;
+        grid-template-areas:
+                'foot';
+        width: 50%;
+    }
+
+}
 
 
 

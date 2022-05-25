@@ -1,6 +1,5 @@
 import React from "react";
 import './App.css';
-
 const AppDinamic = () => {
 
     return (
@@ -115,7 +114,7 @@ const AppDinamic = () => {
             </div>
             <div className={"containerMyEducation"}>
                 <div className={"photoMyEducation"}>
-                    <img src={"photoAboutMe.png"} className={"hundred"}/>
+                    <img src={"photoAboutMe.png"} className={"phAbout"}/>
                 </div>
                 <div className={"myEducationInfo"}>
                     <ul className={"ulEducation"}>
@@ -133,7 +132,7 @@ const AppDinamic = () => {
                     </ul>
                 </div>
             </div>
-            <div className={"containerSkills backgroundColorWhite"}>
+            {/*<div className={"containerSkills backgroundColorWhite"}>
                 <div className={"technologies"}>TECHNOLOGIES</div>
                 <div className={"techDescrip1"}>
                     <ul className={"ulTech"}>
@@ -250,7 +249,9 @@ const AppDinamic = () => {
                         <input type="email" name="email"/>
                         <label>Your message*</label>
                         <textarea name="message" rows="10" ></textarea>
-                        <button className={"buttonForm"} type="submit">CONTACT ME</button>
+                        <div className={"buttonForm2"}>
+                            <button className={"buttonForm"} type="submit">CONTACT ME</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -267,7 +268,7 @@ const AppDinamic = () => {
                         <img  src={"twitterIcon.png"} className={"socialIcon"}/>
                     </a>
                 </div>
-            </div>
+            </div>*/}
         </div>
 
     )
