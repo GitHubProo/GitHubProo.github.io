@@ -132,7 +132,7 @@ const AppDinamic = () => {
                     </ul>
                 </div>
             </div>
-            {/*<div className={"containerSkills backgroundColorWhite"}>
+            <div className={"containerSkills backgroundColorWhite"}>
                 <div className={"technologies"}>TECHNOLOGIES</div>
                 <div className={"techDescrip1"}>
                     <ul className={"ulTech"}>
@@ -200,7 +200,7 @@ const AppDinamic = () => {
             </div>
             <div className={"portfolioContent backgroundColorWhite"}>
                 <div className={"portfolioDescription"}>
-                    <p>PORFOLIO</p>
+                    <p className={"portDescrTitle"}>PORFOLIO</p>
                     Development of geolocation service for tracking ships routes and
                     arrival - departure time.
                     Development of social network experience exchange of sportsman
@@ -223,7 +223,10 @@ const AppDinamic = () => {
                     <img src={"digibarber.png"} className={"imgPortfolioCircle"}/>
                 </div>
                 <div className={"organic"}>
-                    <img src={"organic.png"} className={"portfolioOrganicImg"}/>
+                    <img src={"organic.png"} className={"imgPortfolioCircle"}/>
+                </div>
+                <div className={"someWeb"}>
+                    <img src={"organic.png"} className={"imgPortfolioCircle"}/>
                 </div>
             </div>
             <div className={"containerContactMe"}>
@@ -242,7 +245,7 @@ const AppDinamic = () => {
                     </ul>
                 </div>
                 <div className={"contactMeForm"}>
-                    <form>
+                    <form className={"ContactForm"}>
                         <label htmlFor="text">Name*</label>
                         <input type="text" name="name"/>
                         <label>Email*</label>
@@ -268,7 +271,7 @@ const AppDinamic = () => {
                         <img  src={"twitterIcon.png"} className={"socialIcon"}/>
                     </a>
                 </div>
-            </div>*/}
+            </div>
         </div>
 
     )

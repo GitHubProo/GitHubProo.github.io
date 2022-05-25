@@ -336,9 +336,9 @@ img.imgProfExp{
     grid-template-areas:
             'portfolioDescription portfolioDescription portfolioDescription'
             'hublish llook greenHorn'
-            'digibarber organic organic';
+            'digibarber organic someWeb';
     grid-gap: 30px;
-    padding: 50px 100px 100px 100px;
+    padding: 50px 100px 50px 100px;
     max-width: 1400px;
 }
 /*Контейнер портфоліо ОПИС*/
@@ -364,14 +364,16 @@ img.imgProfExp{
 .freelance{
     grid-area: freelance;
     text-align: center;
-
 }
 .portfolioOrganicImg {
-    height: 370px;
+    height: 100%;
 }
 .organic{
     grid-area: organic;
     text-align: center;
+}
+.someWeb{
+    grid-area: someWeb;
 }
 /*Контейнер контакти*/
 .containerContactMe{
@@ -432,8 +434,8 @@ textarea{
     background-color: #191f21;
     color: white;
     margin-top: 50px;
-    width: 180px;
-    height: 80px;
+    width: 150px;
+    height: 50px;
     font-size: medium;
     cursor: pointer;
     border-color: #191f21;
@@ -451,7 +453,7 @@ textarea{
     text-align: center;
     padding: 50px 50px 30px 50px;
 }
-/*звуження екрану*/
+/*responsive tablet*/
 @media (max-width: 1200px) {
     /*Піктограми та імя на панелі навігації*/
     .headerLogo{
@@ -496,6 +498,9 @@ textarea{
                 'profExpDescribeSql sqlCertificate'
                 'profExpDescribeGreenHorn greenHorn'
                 'profExpDescribeApplicationIOS applicationIOS';
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
     }
     .profExperience{
         grid-area: profExperience;
@@ -503,13 +508,16 @@ textarea{
         font-size: large;
         color: #2ecc71;
         text-align: left;
-        padding: 30px;
+        padding-left: 30px;
+        margin-bottom: 0px;
+        padding-top: 20px;
     }
     .applicationIOS{
         grid-area: applicationIOS;
         text-align: center;
     }
     img.imgProfExp{
+        margin-top: 30px;
         width: 50%;
         border-radius: 50%;
     }
@@ -569,14 +577,34 @@ textarea{
             'portfolioDescription portfolioDescription'
             'hublish llook'
             'greenHorn digibarber'
-            'organic organic';
+            'organic someWeb';
         grid-gap: 30px;
         text-align: center;
-        padding: 30px;
+        padding: 50px;
     }
-    .portfolioOrganicImg{
-        width: 100%;
-        /*border-radius: 50%;*/
+    .hublish{
+        grid-area: hublish;
+    }
+    .llook{
+        grid-area: llook;
+    }
+    .greenHorn{
+        grid-area: greenHorn;
+        text-align: center;
+    }
+    .digibarber{
+        grid-area: digibarber;
+    }
+    .freelance{
+        grid-area: freelance;
+        text-align: center;
+    }
+    .organic{
+        grid-area: organic;
+        text-align: center;
+    }
+    .someWeb{
+        grid-area: someWeb;
     }
     .imgPortfolioCircle{
         width: 100%;
@@ -592,8 +620,18 @@ textarea{
         font-size: xx-large;
         background-color: #252e30;
     }
+    .buttonForm{
+        background-color: #191f21;
+        color: white;
+        margin-top: 50px;
+        width: 150px;
+        height: 50px;
+        font-size: medium;
+        cursor: pointer;
+        border-color: #191f21;
+    }
 }
-
+/*responsive mobile*/
 @media (max-width: 750px) {
     /*Голловне фото і навігація*/
     .containerHome{
@@ -686,7 +724,7 @@ textarea{
         color: #2ecc71;
         text-align: center;
         margin-bottom: 0px;
-        margin-top: 0px;
+        margin-top: 20px;
         padding-top: 0px;
         padding-bottom: 0px;
     }
@@ -791,16 +829,76 @@ textarea{
                 'devToolsDescrip2'
                 'devToolsDescrip3';
         text-align: center;
-        width: 50%;
     }
+    /*Контейнер навички ТЕХНОЛОГІЇ*/
+    .technologies{
+        grid-area: technologies;
+        margin-top: 20px;
+        font-weight: bolder;
+        font-size: large;
+        color: #2ecc71;
+        margin-left: 0px;
+    }
+    .techDescrip1{
+        grid-area: techDescrip1;
+    }
+    .techDescrip2{
+        grid-area: techDescrip2;
+    }
+    .techDescrip3{
+        grid-area: techDescrip3;
+    }
+    .ulTech {
+        list-style-type: none;
+        font-size: large;
+        padding-left: 0px;
+    }
+    .liTech {
+        font-weight: bold;
+    }
+    /*Контейнер навички ІНСТРУМЕНТИ РОЗРОБКИ*/
+    .devToolsDescrip1{
+        grid-area: devToolsDescrip1;
+    }
+    .devToolsDescrip2{
+        grid-area: devToolsDescrip2;
+    }
+    .devToolsDescrip3{
+        grid-area: devToolsDescrip3;
+    }
+    .devTools{
+        grid-area: devTools;
+        margin-top: 20px;
+        font-weight: bolder;
+        font-size: large;
+        color: #2ecc71;
+        margin-left: 0px;
+    }
+    .ulDev {
+        list-style-type: none;
+        font-size: large;
+        padding-left: 0px;
+    }
+    .liDev {
 
+    }
+    /*Контейнер відгуки ФОТО*/
     .containerTestimonials{
         display: grid;
         grid-template-areas:
                 'testimonialsPhoto'
                 'testimonialsInfo';
         text-align: center;
-        width: 50%;
+        padding: 30px;
+    }
+    .testimonialsPhoto{
+        grid-area: testimonialsPhoto;
+        background-color: #f2f2f1;
+        padding: 20px;
+    }
+    .testimonPhoto{
+        width: 200px;
+        height: 250px;
     }
     /*Контейнер відгуки ОПИС*/
     .testimonialsInfo{
@@ -808,8 +906,19 @@ textarea{
         background-color: #f2f2f1;
         font-size: large;
         font-style: italic;
-        padding: 20px;
+        padding: 10px;
     }
+    .buttonTestimonials{
+        margin-top: 30px;
+        width: auto;
+        height: 35px;
+        background-color: #2ecc71;
+        color: #f2f2f1;
+        font-size: small;
+        cursor: pointer;
+        border-color: #2ecc71;
+    }
+    /*Контейнер портфоліо ОПИС*/
     .portfolioContent{
         display: grid;
         grid-template-areas:
@@ -818,27 +927,51 @@ textarea{
             'llook'
             'greenHorn'
             'digibarber'
-            'organic';
+            'organic'
+            'someWeb';
         grid-gap: 10px;
         text-align: center;
         padding: 10px;
-        width: 50%;
-    }
-    .portfolioOrganicImg{
-        width: 40%;
-        height: 100%;
-        /*border-radius: 50%;*/
     }
     .imgPortfolioCircle{
         width: 40%;
         /*border-radius: 50%;*/
     }
-    /*Контейнер портфоліо ОПИС*/
     .portfolioDescription{
         grid-area: portfolioDescription;
-        text-align: center;
+        text-align: left;
         padding-bottom: 10px;
         font-size: large;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .portDescrTitle{
+        text-align: center;
+    }
+    .hublish{
+        grid-area: hublish;
+    }
+    .llook{
+        grid-area: llook;
+    }
+    .greenHorn{
+        grid-area: greenHorn;
+        text-align: center;
+    }
+    .digibarber{
+        grid-area: digibarber;
+    }
+    .freelance{
+        grid-area: freelance;
+        text-align: center;
+    }
+    .organic{
+        grid-area: organic;
+        text-align: center;
+    }
+    .someWeb{
+        grid-area: someWeb;
+        text-align: center;
     }
     .containerContactMe{
         display: grid;
@@ -849,18 +982,19 @@ textarea{
         color: #4b5456;
         font-size: small;
         background-color: #252e30;
-        width: 50%;
+        padding: 0px;
     }
     .contactMe{
         grid-area: contactMe;
         color: #4b5456;
         font-size: large;
         text-align: center;
-        padding: 20px;
+        padding: 0px;
     }
     .ulContactMe {
         list-style-type: none;
         font-size: large;
+        padding: 20px;
     }
     .liContactMe.titleText {
         margin-bottom: 10px;
@@ -868,20 +1002,41 @@ textarea{
     }
     .contactMeForm{
         grid-area: contactMeForm;
+        padding: 20px;
     }
-    form{
+    .ContactForm{
+        height: auto;
+        padding-right: 10px;
+    }
+    input{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: 50px
+    }
+    textarea{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: 150px
+    }
+    label{
+        width: 100%;
+        padding: 0px;
+        margin: 5px;
     }
     .buttonForm{
         background-color: #191f21;
         color: white;
-        margin-top: 50px;
-        width: 180px;
-        height: 80px;
+        margin-top: 10px;
+        width: auto;
+        height: 30px;
         font-size: small;
         cursor: pointer;
         border-color: #191f21;
     }
     .buttonForm2{
+        margin-top: 10px;
         text-align: center;
     }
     /*Контейнер футер*/
@@ -889,7 +1044,19 @@ textarea{
         display: grid;
         grid-template-areas:
                 'foot';
-        width: 50%;
+        font-size: small;
+    }
+    img.socialIcon{
+        width: 25px;
+        height: 25px;
+        margin: 15px 5px 5px 5px;
+    }
+    .foot{
+        grid-area: foot;
+        background-color: #191f21;
+        color: #41494b;
+        text-align: center;
+        padding: 20px 20px 10px 20px;
     }
 
 }
