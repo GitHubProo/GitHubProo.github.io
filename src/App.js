@@ -33,6 +33,11 @@ const AppDinamic = () => {
                             <li  className={"liNav"}><a href="#contactMe">CONTACT ME</a></li>
                         </ul>
                     </div>
+                    <div className={"sideBarNav"}>
+                        <button className={"buttonSideBar"}>
+                            <img  className={"sideBar"} src={"sideBar.png"}/>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div className={"containerProfExperience backgroundColorWhite"}>

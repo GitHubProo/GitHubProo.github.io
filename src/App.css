@@ -40,6 +40,7 @@ img.imgProfExp{
     width: 750px;
     height: 90px;
 }
+
 .contHeader{
     grid-area: contHeader;
     width: 1600px;
@@ -83,6 +84,9 @@ img.imgProfExp{
     grid-area: photoHeader;
 }
 /*Навігація*/
+.sideBarNav{
+    display: none;
+}
 .headerNavMenu{
     grid-area: headerNavMenu;;
     height: 70px;
@@ -455,6 +459,11 @@ textarea{
 }
 /*responsive tablet*/
 @media (max-width: 1200px) {
+    .containerHome{
+        display: grid;
+        grid-template-areas:
+            'photoHeader';
+    }
     /*Піктограми та імя на панелі навігації*/
     .headerLogo{
         float: left;
@@ -485,6 +494,21 @@ textarea{
         height: 50px;
         width: 100%;
         background: #252d2f;
+    }
+    .sideBarNav{
+        display: block;
+        margin-right: 80px;
+        text-align: right;
+    }
+    .sideBar{
+        margin-top: 5px;
+        width: 35px;
+        height: 35px;
+    }
+    .buttonSideBar {
+        background: unset;
+        cursor: pointer;
+        border: unset;
     }
     .ulNav{
         display: none;
@@ -674,6 +698,21 @@ textarea{
         background: #252d2f;
         padding-left: 30px;
 
+    }
+    .sideBarNav{
+        display: block;
+        margin-right: 50px;
+        text-align: right;
+    }
+    .sideBar{
+        margin-top: 3px;
+        width: 40px;
+        height: 40px;
+    }
+    .buttonSideBar {
+        background: unset;
+        cursor: pointer;
+        border: unset;
     }
     .ulNav{
         display: none;
