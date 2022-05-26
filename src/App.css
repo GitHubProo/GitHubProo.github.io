@@ -501,6 +501,9 @@ textarea{
         margin-right: 30px;
         text-align: right;
     }
+    ul.ulSideBar{
+        list-style-type: none;
+    }
     .sideBar{
         margin-top: 5px;
         width: 35px;
@@ -704,6 +707,9 @@ textarea{
         display: block;
         margin-right: 30px;
         text-align: right;
+    }
+    ul.ulSideBar{
+        list-style-type: none;
     }
     .sideBar{
         margin-top: 3px;

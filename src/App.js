@@ -1,6 +1,15 @@
 import React from "react";
 import './App.css';
-const AppDinamic = () => {
+import Menu from "./Menu";
+const App = () => {
+    const items = [
+        {value:'home', href:'/home'},
+        {value:'profExperiance', href:'/profExperiance'},
+        {value:'educations', href:'/educations'},
+        {value:'skills', href:'/skills'},
+        {value:'testimonials', href:'/testimonials'},
+        {value:'portfolio', href:'/portfolio'},
+        {value:'contactMe', href:'/contactMe'}]
 
     return (
         <div  className={"wrapper"}>
@@ -33,11 +42,11 @@ const AppDinamic = () => {
                             <li  className={"liNav"}><a href="#contactMe">CONTACT ME</a></li>
                         </ul>
                     </div>
-                    <div className={"sideBarNav"}>
+                    <Menu  header={"header"} items={items}>
                         <button className={"buttonSideBar"}>
                             <img  className={"sideBar"} src={"sideBar.png"}/>
                         </button>
-                    </div>
+                    </Menu>
                 </div>
             </div>
             <div className={"containerProfExperience backgroundColorWhite"}>
@@ -282,7 +291,7 @@ const AppDinamic = () => {
     )
 }
 
-export default AppDinamic;
+export default App;
 
 /*
 "Life is like a combination lock. Your job is to find the numbers,
