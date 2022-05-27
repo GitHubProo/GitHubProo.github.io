@@ -1,19 +1,17 @@
 import React from 'react';
 import './App.css';
 
-const Menu = ({header, items}) => {
+const Menu = ({ items, active, setActive}) => {
     return (
-        <div>
-            <div className={"blur"}></div>
-            <div className={"sideBarNav"}>
-                <div className={"menuHeader"}>{header}</div>
-                <ul className={"ulSideBar"}>
-                    {items.map(item =>
-                        <li>
-                            <a href={item.href}>{item.value}</a>
-                        </li>
-                    )}
-                </ul>
+        <div className={active ? "sideBarNav active" : "sideBarNav"} onClick={() => setActive(false)}>
+            <div className={"menuHeader"} onClick={e => e.stopPropagation()}>
+            <ul className={"ulSideBar"}>
+                {items.map(item =>
+                    <li>
+                        <a href={item.href}>{item.value}</a>
+                    </li>
+                )}
+            </ul>
             </div>
         </div>
     );

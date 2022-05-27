@@ -17,6 +17,18 @@ img.imgProfExp{
 .backgroundColorWhite{
     background-color: white;
 }
+.upContainer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+}
+.upImg{
+    width: 45px;
+    height: 45px;
+}
 /*Загальна обгортка*/
 .wrapper{
     display: grid;
@@ -85,6 +97,12 @@ img.imgProfExp{
 }
 /*Навігація*/
 .sideBarNav{
+    display: none;
+}
+.sideBar{
+    display: none;
+}
+.buttonSideBar {
     display: none;
 }
 .headerNavMenu{
@@ -459,6 +477,9 @@ textarea{
 }
 /*responsive tablet*/
 @media (max-width: 1200px) {
+    .upContainer{
+        display: none;
+    }
     .containerHome{
         display: grid;
         grid-template-areas:
@@ -497,22 +518,42 @@ textarea{
         padding-left: 20px;
     }
     .sideBarNav{
+        display: none;
+        margin-right: 30px;
+        text-align: center;
+        transition: all 0.2s;
+        background-color: #252d2f;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        opacity: 90%;
+    }
+    .sideBarNav.active{
+        display: block;
+    }
+    .sideBar{
         display: block;
         margin-right: 30px;
         text-align: right;
     }
-    ul.ulSideBar{
-        list-style-type: none;
-    }
-    .sideBar{
-        margin-top: 5px;
-        width: 35px;
-        height: 35px;
-    }
     .buttonSideBar {
+        display: inline-block;
         background: unset;
         cursor: pointer;
         border: unset;
+    }
+    .sideBarImg{
+        width: 45px;
+        height: 45px;
+    }
+    ul.ulSideBar{
+        list-style-type: none;
+    }
+    ul li a{
+        text-decoration: none;
+        color: #2ecc71;
+        font-size: larger;
     }
     .ulNav{
         display: none;
@@ -661,6 +702,9 @@ textarea{
 }
 /*responsive mobile*/
 @media (max-width: 750px) {
+    .upContainer{
+        display: none;
+    }
     /*Голловне фото і навігація*/
     .containerHome{
         display: grid;
@@ -701,25 +745,47 @@ textarea{
         width: 100%;
         background: #252d2f;
         padding-left: 20px;
-
     }
     .sideBarNav{
+        display: none;
+        margin-right: 40px;
+        margin-left: 0px;
+        text-align: center;
+        transition: all 0.2s;
+        background-color: #252d2f;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 10px;
+        opacity: 90%;
+    }
+    .sideBarNav.active{
+        display: block;
+    }
+    .sideBar{
         display: block;
         margin-right: 30px;
         text-align: right;
     }
-    ul.ulSideBar{
-        list-style-type: none;
-    }
-    .sideBar{
-        margin-top: 3px;
-        width: 40px;
-        height: 40px;
-    }
     .buttonSideBar {
+        display: inline-block;
         background: unset;
         cursor: pointer;
         border: unset;
+    }
+    .sideBarImg{
+        width: 45px;
+        height: 45px;
+    }
+    ul.ulSideBar{
+        list-style-type: none;
+        margin-bottom: 30px;
+
+    }
+    ul li a{
+        text-decoration: none;
+        color: #2ecc71;
+        font-size: larger;
     }
     .ulNav{
         display: none;
@@ -1106,7 +1172,6 @@ textarea{
     }
 
 }
-
 
 
 

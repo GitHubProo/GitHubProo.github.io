@@ -1,19 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import './App.css';
 import Menu from "./Menu";
 const App = () => {
+    const [menuActive, setMenuActive] = useState(false)
     const items = [
-        {value:'home', href:'/home'},
-        {value:'profExperiance', href:'/profExperiance'},
-        {value:'educations', href:'/educations'},
-        {value:'skills', href:'/skills'},
-        {value:'testimonials', href:'/testimonials'},
-        {value:'portfolio', href:'/portfolio'},
-        {value:'contactMe', href:'/contactMe'}]
+        {value:'HOME', href:'/home'},
+        {value:'PROFESHIONA EXPERIANCE', href:'/profExperiance'},
+        {value:'EDUCATION', href:'/educations'},
+        {value:'SKILLS', href:'/skills'},
+        {value:'TESTIMONIALS', href:'/testimonials'},
+        {value:'PORTFOLIO', href:'/portfolio'},
+        {value:'CONTACT', href:'/contactMe'}]
 
     return (
         <div  className={"wrapper"}>
-            <div className={"containerHome"}>
+            <div id={"home"} className={"containerHome"}>
                 <div className={"photoHeader"}>
                     <img src={"photoHeader.png"} className={"hundred"}/>
                 </div>
@@ -34,22 +35,27 @@ const App = () => {
                     <div>
                         <ul className={"ulNav"}>
                             <li className={"liNav"}><a href="#home">HOME</a></li>
-                            <li  className={"liNav"}><a href="#aboutMe">ABOUT ME</a></li>
-                            <li  className={"liNav"}><a href="#resume">RESUME</a></li>
+                            <li  className={"liNav"}><a href="#pfofExp">PROFESHIONAL EXPERIANCE</a></li>
+                            <li  className={"liNav"}><a href="#education">EDUCATION</a></li>
                             <li  className={"liNav"}><a href="#skills">SKILLS</a></li>
-                            <li  className={"liNav"}><a href="#resume">TESTIMONIALS</a></li>
+                            <li  className={"liNav"}><a href="#testimonials">TESTIMONIALS</a></li>
                             <li  className={"liNav"}><a href="#portfolio">PORTFOLIO</a></li>
                             <li  className={"liNav"}><a href="#contactMe">CONTACT ME</a></li>
                         </ul>
                     </div>
-                    <Menu  header={"header"} items={items}>
-                        <button className={"buttonSideBar"}>
-                            <img  className={"sideBar"} src={"sideBar.png"}/>
+                    <div className={"sideBar"}>
+                        <button className={"buttonSideBar"} onClick={() => setMenuActive(!menuActive)}>
+                            <img  className={"sideBarImg"} src={"sideBar.png"}/>
                         </button>
+                    </div>
+                    <Menu active={menuActive} setActive={setMenuActive} items={items}>
                     </Menu>
+                    <div className={"upContainer"}>
+                        <a href={"pfofExp"}><img className={"upImg"} src={"up.png"}/></a>
+                    </div>
                 </div>
             </div>
-            <div className={"containerProfExperience backgroundColorWhite"}>
+            <div id={"pfofExp"} className={"containerProfExperience backgroundColorWhite"}>
                 <div className={"profExperience"}>
                     PROFESSIONAL EXPERIENCE
                 </div>
@@ -126,7 +132,7 @@ const App = () => {
                     </ul>
                 </div>
             </div>
-            <div className={"containerMyEducation"}>
+            <div id={"education"} className={"containerMyEducation"}>
                 <div className={"photoMyEducation"}>
                     <img src={"photoAboutMe.png"} className={"phAbout"}/>
                 </div>
@@ -146,7 +152,7 @@ const App = () => {
                     </ul>
                 </div>
             </div>
-            <div className={"containerSkills backgroundColorWhite"}>
+            <div id={"skills"} className={"containerSkills backgroundColorWhite"}>
                 <div className={"technologies"}>TECHNOLOGIES</div>
                 <div className={"techDescrip1"}>
                     <ul className={"ulTech"}>
@@ -197,7 +203,7 @@ const App = () => {
                     </ul>
                 </div>
             </div>
-            <div className={"containerTestimonials"}>
+            <div id={"testimonials"} className={"containerTestimonials"}>
                 <div className={"testimonialsPhoto"}>
                     <img src={"logoPhoto1.png"} className={"testimonPhoto"}/>
                 </div>
@@ -212,7 +218,7 @@ const App = () => {
                     <button className={"buttonTestimonials"}>GO TO WEB SITE</button>
                 </div>
             </div>
-            <div className={"portfolioContent backgroundColorWhite"}>
+            <div id={"portfolio"} className={"portfolioContent backgroundColorWhite"}>
                 <div className={"portfolioDescription"}>
                     <p className={"portDescrTitle"}>PORFOLIO</p>
                     Development of geolocation service for tracking ships routes and
@@ -243,7 +249,7 @@ const App = () => {
                     <img src={"organic.png"} className={"imgPortfolioCircle"}/>
                 </div>
             </div>
-            <div className={"containerContactMe"}>
+            <div id={"contactMe"} className={"containerContactMe"}>
                 <div className={"contactMe"}>
                     <ul className={"ulContactMe"}>
                         <li className={"liContactMe titleText"}> CONTACT ME</li>
