@@ -1,16 +1,17 @@
 import React, {useState} from "react";
 import './App.css';
 import Menu from "./Menu";
+import MyPDF from './resume.jpg';
 const App = () => {
     const [menuActive, setMenuActive] = useState(false)
     const items = [
-        {value:'HOME', href:'/home'},
-        {value:'PROFESHIONA EXPERIANCE', href:'/profExperiance'},
-        {value:'EDUCATION', href:'/educations'},
-        {value:'SKILLS', href:'/skills'},
-        {value:'TESTIMONIALS', href:'/testimonials'},
-        {value:'PORTFOLIO', href:'/portfolio'},
-        {value:'CONTACT', href:'/contactMe'}]
+        {value:'HOME', href:'#home'},
+        {value:'PROFESHIONA EXPERIANCE', href:'#pfofExp'},
+        {value:'EDUCATION', href:'#education'},
+        {value:'SKILLS', href:'#skills'},
+        {value:'TESTIMONIALS', href:'#testimonials'},
+        {value:'PORTFOLIO', href:'#portfolio'},
+        {value:'CONTACT', href:'#contactMe'}]
 
     return (
         <div  className={"wrapper"}>
@@ -24,10 +25,10 @@ const App = () => {
                         <text className={"TextOnButtonLearnMore"}>LEARN MORE</text>
                     </button>
                 </div>*/}
-                <div className={"headerNavMenu"}>
+                <div id={"navMenu"} className={"headerNavMenu"}>
                     <div className={"headerLogo"}>
                         <img  className={"logoPhoto"} src={"logoPhoto.png"}/>
-                        <a href="#logoLinkedIn">
+                        <a href="https://www.linkedin.com/" target="_blank">
                             <img  className={"logoLinkedIn"} src={"photolinkedin.png"}/>
                         </a>
                         <div className={"nameText"}>Developer</div>
@@ -51,7 +52,7 @@ const App = () => {
                     <Menu active={menuActive} setActive={setMenuActive} items={items}>
                     </Menu>
                     <div className={"upContainer"}>
-                        <a href={"pfofExp"}><img className={"upImg"} src={"up.png"}/></a>
+                        <a href={"#navMenu"}><img className={"upImg"} src={"up.png"}/></a>
                     </div>
                 </div>
             </div>
@@ -84,7 +85,9 @@ const App = () => {
                     </ul>
                 </div>
                 <div className={"sqlCertificate"}>
-                    <img src={"hublish.png"} className={"imgProfExp"}/>
+                    <a href={"https://academy.sql.ua/certificate-sql00031/"} target={"_blank"}>
+                        <img src={"sqlSertificate.png"} className={"imgProfExp"}/>
+                    </a>
                 </div>
                 <div className={"profExpDescribeSql"}>
                     <ul className={"ulProf"}>
@@ -132,11 +135,11 @@ const App = () => {
                     </ul>
                 </div>
             </div>
-            <div id={"education"} className={"containerMyEducation"}>
+            <div className={"containerMyEducation"}>
                 <div className={"photoMyEducation"}>
                     <img src={"photoAboutMe.png"} className={"phAbout"}/>
                 </div>
-                <div className={"myEducationInfo"}>
+                <div id={"education"} className={"myEducationInfo"}>
                     <ul className={"ulEducation"}>
                         <li className={"liEducTitle"}>MY EDUCATION</li>
                         <li  className={"liEducation"}> State University</li>
@@ -147,7 +150,10 @@ const App = () => {
                         <li  className={"liEd"}>Specialist degree in Computer Scienc</li>
                         <li  className={"liEducation"}>English</li>
                         <li className={"liEd"}>Pre - Intermidiate</li>
-                        <li><button className={"buttonEducation"}>DOWNLOAD RESUME</button>
+                        <li>
+                            <a href="./resume.jpg" download={'resume.jpg'} target={"_blank"}>
+                                <button className={"buttonEducation"}>DOWNLOAD RESUME</button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -205,7 +211,9 @@ const App = () => {
             </div>
             <div id={"testimonials"} className={"containerTestimonials"}>
                 <div className={"testimonialsPhoto"}>
-                    <img src={"logoPhoto1.png"} className={"testimonPhoto"}/>
+                    <a href={"https://organic-kostiv.in.ua/about/"} target={"_blank"}>
+                        <img src={"organiTestimonial.png"} className={"testimonPhoto"}/>
+                    </a>
                 </div>
                 <div className={"testimonialsInfo"}>
                     <div>
@@ -215,7 +223,9 @@ const App = () => {
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </text>
                     </div>
+                    <a href={"https://organic-kostiv.in.ua/contacts/"} target={"_blank"}>
                     <button className={"buttonTestimonials"}>GO TO WEB SITE</button>
+                    </a>
                 </div>
             </div>
             <div id={"portfolio"} className={"portfolioContent backgroundColorWhite"}>
@@ -265,7 +275,11 @@ const App = () => {
                     </ul>
                 </div>
                 <div className={"contactMeForm"}>
-                    <form className={"ContactForm"}>
+                    <form className={"ContactForm"}
+                          method={'post'}
+                          action={"petropetropetro@gmail.com"}
+                          enctype="multipart/form-data"
+                          name="EmailForm">
                         <label htmlFor="text">Name*</label>
                         <input type="text" name="name"/>
                         <label>Email*</label>
@@ -281,13 +295,13 @@ const App = () => {
             <div className={"containerFoot"}>
                 <div className={"foot"}>
                     <div >COPYRIGHT 2022 BUILD WITH PASSION</div>
-                    <a href="#linkedIn">
+                    <a href="https://www.linkedin.com/" target={"_blank"}>
                         <img src={"photolinkedin.png"} className={"socialIcon"}/>
                     </a>
-                    <a href="#facebook">
+                    <a href="https://uk-ua.facebook.com/" target={"_blank"}>
                         <img  src={"facebookIcon.png"} className={"socialIcon"}/>
                     </a>
-                    <a href="#twitterIcon">
+                    <a href="https://twitter.com/?lang=uk" target={"_blank"}>
                         <img  src={"twitterIcon.png"} className={"socialIcon"}/>
                     </a>
                 </div>

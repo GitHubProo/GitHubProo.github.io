@@ -333,6 +333,7 @@ img.imgProfExp{
 .testimonPhoto{
     width: 200px;
     height: 250px;
+    border-radius: 100px;
 }
 /*Контейнер відгуки ОПИС*/
 .testimonialsInfo{
@@ -942,6 +943,25 @@ textarea{
                 'devToolsDescrip3';
         text-align: center;
     }
+    /*Контейнер відгуки ФОТО*/
+    .containerTestimonials{
+        display: grid;
+        grid-template-areas:
+                'testimonialsPhoto'
+                'testimonialsInfo';
+        text-align: center;
+        padding: 30px;
+    }
+    .testimonialsPhoto{
+        grid-area: testimonialsPhoto;
+        background-color: #f2f2f1;
+        padding: 20px;
+    }
+    .testimonPhoto{
+        width: 200px;
+        height: 250px;
+        border-radius: 100px;
+    }
     /*Контейнер навички ТЕХНОЛОГІЇ*/
     .technologies{
         grid-area: technologies;
@@ -1011,6 +1031,7 @@ textarea{
     .testimonPhoto{
         width: 200px;
         height: 250px;
+        border-radius: 100px;
     }
     /*Контейнер відгуки ОПИС*/
     .testimonialsInfo{
