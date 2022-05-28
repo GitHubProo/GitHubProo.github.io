@@ -245,23 +245,25 @@ const App = () => {
                     Development of e-commerce application for private entrepreneurs
                     (online store, mobile platform for finding services and customers)
                 </div>
-                <div className={"hublish"}>
-                    <img src={"hublish.png"} className={"imgPortfolioCircle"}/>
-                </div>
                 <div className={"llook"} >
-                    <img src={"llok.png"} className={"imgPortfolioCircle"}/>
-                </div>
-                <div className={"greenHorn"}>
-                    <img src={"greenHorn.png"} className={"imgPortfolioCircle"}/>
-                </div>
-                <div className={"digibarber"}>
-                    <img src={"digibarber.png"} className={"imgPortfolioCircle"}/>
+                    <a href={"https://apps.apple.com/ua/app/llook-portfolio/id1295663612?l=uk"} target={"_blank"}>
+                        <img src={"llokImg.png"} className={"imgPortfolioCircle"}/>
+                    </a>
                 </div>
                 <div className={"organic"}>
-                    <img src={"organic.png"} className={"imgPortfolioCircle"}/>
+                    <a href={"https://organic-kostiv.in.ua/"} target={"_blank"}>
+                        <img src={"organicImg.png"} className={"imgPortfolioCircle"}/>
+                    </a>
                 </div>
-                <div className={"someWeb"}>
-                    <img src={"organic.png"} className={"imgPortfolioCircle"}/>
+                <div className={"greenHorn"}>
+                    <a href={"https://play.google.com/store/apps/details?id=com.greenhorn&hl=uk&gl=US"} target={"_blank"}>
+                    <img src={"greenHornImg.png"} className={"imgPortfolioCircle"}/>
+                    </a>
+                </div>
+                <div className={"digibarber"}>
+                    <a href={"https://apps.apple.com/ua/app/digibarber/id1329392683?l=uk"} target={"_blank"}>
+                    <img src={"digibarberImg.png"} className={"imgPortfolioCircle"}/>
+                    </a>
                 </div>
             </div>
             <div id={"contactMe"} className={"containerContactMe"}>

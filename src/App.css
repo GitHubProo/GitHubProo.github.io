@@ -150,7 +150,7 @@ img.imgProfExp{
     font-size: x-large;
     color: #2ecc71;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 120px;
     margin-bottom: 50px;
 
 }
@@ -357,9 +357,9 @@ img.imgProfExp{
 .portfolioContent {
     display: grid;
     grid-template-areas:
-            'portfolioDescription portfolioDescription portfolioDescription'
-            'hublish llook greenHorn'
-            'digibarber organic someWeb';
+            'portfolioDescription portfolioDescription'
+            'llook organic'
+            'digibarber greenHorn';
     grid-gap: 30px;
     padding: 50px 100px 50px 100px;
     max-width: 1400px;
@@ -370,9 +370,6 @@ img.imgProfExp{
     text-align: center;
     padding-bottom: 50px;
     font-size: x-large;
-}
-.hublish{
-    grid-area: hublish;
 }
 .llook{
     grid-area: llook;
@@ -388,15 +385,15 @@ img.imgProfExp{
     grid-area: freelance;
     text-align: center;
 }
-.portfolioOrganicImg {
-    height: 100%;
-}
 .organic{
     grid-area: organic;
     text-align: center;
 }
-.someWeb{
-    grid-area: someWeb;
+.portfolioOrganicImg {
+    height: 100%;
+}
+.imgPortfolioCircleDigibarber{
+    height: 55%;
 }
 /*Контейнер контакти*/
 .containerContactMe{
@@ -645,15 +642,11 @@ textarea{
         display: grid;
         grid-template-areas:
             'portfolioDescription portfolioDescription'
-            'hublish llook'
-            'greenHorn digibarber'
-            'organic someWeb';
+            'llook organic'
+            'digibarber greenHorn';
         grid-gap: 30px;
         text-align: center;
         padding: 50px;
-    }
-    .hublish{
-        grid-area: hublish;
     }
     .llook{
         grid-area: llook;
@@ -673,12 +666,13 @@ textarea{
         grid-area: organic;
         text-align: center;
     }
-    .someWeb{
-        grid-area: someWeb;
-    }
+
     .imgPortfolioCircle{
         width: 100%;
         /*border-radius: 50%;*/
+    }
+    .imgPortfolioCircleDigibarber{
+        height: 62%;
     }
     .containerContactMe{
         display: grid;
@@ -1056,12 +1050,10 @@ textarea{
         display: grid;
         grid-template-areas:
             'portfolioDescription'
-            'hublish'
             'llook'
-            'greenHorn'
-            'digibarber'
             'organic'
-            'someWeb';
+            'digibarber'
+            'greenHorn';
         grid-gap: 10px;
         text-align: center;
         padding: 10px;
@@ -1069,6 +1061,10 @@ textarea{
     .imgPortfolioCircle{
         width: 40%;
         /*border-radius: 50%;*/
+    }
+    .imgPortfolioCircleDigibarber{
+        width: 40%;
+        height: 70%;
     }
     .portfolioDescription{
         grid-area: portfolioDescription;
@@ -1080,9 +1076,6 @@ textarea{
     }
     .portDescrTitle{
         text-align: center;
-    }
-    .hublish{
-        grid-area: hublish;
     }
     .llook{
         grid-area: llook;
@@ -1100,10 +1093,6 @@ textarea{
     }
     .organic{
         grid-area: organic;
-        text-align: center;
-    }
-    .someWeb{
-        grid-area: someWeb;
         text-align: center;
     }
     .containerContactMe{
@@ -1194,7 +1183,38 @@ textarea{
 
 }
 
-
+/*responsive mobile*/
+@media (max-width: 300px) {
+    .sideBarImg{
+        width: 30px;
+        height: 30px;
+    }
+    .sideBar{
+        display: block;
+        margin-right: 20px;
+        margin-top: 7px;
+        text-align: right;
+    }
+    .nameText {
+        margin-top: 17px;
+        margin-left: 60px;
+        color: white;
+        font-family: "Arial";
+        font-size: small;
+    }
+    .profExperience{
+        grid-area: profExperience;
+        font-weight: bolder;
+        font-size: small;
+        color: #2ecc71;
+        text-align: center;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        margin-top: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
 
 
 
