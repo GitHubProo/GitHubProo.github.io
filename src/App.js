@@ -31,7 +31,7 @@ const App = () => {
                         <a href="https://www.linkedin.com/" target="_blank">
                             <img  className={"logoLinkedIn"} src={"photolinkedin.png"}/>
                         </a>
-                        <div className={"nameText"}>Developer</div>
+                        <div className={"nameText"}>Developer Developer</div>
                     </div>
                     <div>
                         <ul className={"ulNav"}>
@@ -61,7 +61,9 @@ const App = () => {
                     PROFESSIONAL EXPERIENCE
                 </div>
                 <div className={"organic"}>
-                    <img src={"organic.png"} className={"imgProfExp"}/>
+                    <a href={"https://organic-kostiv.in.ua/"} target={"_blank"}>
+                        <img src={"organicImg.png"} className={"imgProfExp"}/>
+                    </a>
                 </div>
                 <div className={"profExpDescribeOrganic"}>
                     <ul className={"ulProf"}>
@@ -99,7 +101,9 @@ const App = () => {
                     </ul>
                 </div>
                 <div className={"greenHorn"}>
-                    <img src={"greenHorn.png"} className={"imgProfExp"}/>
+                    <a href={"https://play.google.com/store/apps/details?id=com.greenhorn&hl=uk&gl=US"} target={"_blank"}>
+                        <img src={"greenHornImg.png"} className={"imgProfExp"}/>
+                    </a>
                 </div>
                 <div className={"profExpDescribeGreenHorn"}>
                     <ul className={"ulProf"}>
@@ -113,13 +117,14 @@ const App = () => {
                 </div>
                 <div className={"applicationIOS"}>
                     <div className={"applicationIOSGap"}>
-                        <img src={"hublish.png"} className={"imgProfExp"}/>
+                        <a href={"https://apps.apple.com/ua/app/digibarber/id1329392683?l=uk"} target={"_blank"}>
+                            <img src={"digibarberImg.png"}className={"imgProfExp"}/>
+                        </a>
                     </div>
                     <div className={"applicationIOSGap"}>
-                        <img src={"digibarber.png"}className={"imgProfExp"}/>
-                    </div>
-                    <div className={"applicationIOSGap"}>
-                        <img src={"llok.png"} className={"imgProfExp"}/>
+                        <a href={"https://apps.apple.com/ua/app/llook-portfolio/id1295663612?l=uk"} target={"_blank"}>
+                            <img src={"llokImg.png"} className={"imgProfExp"}/>
+                        </a>
                     </div>
                 </div>
                 <div className={"profExpDescribeApplicationIOS"}>

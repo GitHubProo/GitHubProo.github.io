@@ -86,11 +86,11 @@ img.imgProfExp{
     width: 45px;
 }
 .nameText {
-    margin-top: 20px;
-    margin-left: 100px;
+    margin-top: 25px;
+    margin-left: 80px;
     color: white;
     font-family: "Arial";
-    font-size: xx-large;
+    font-size: large;
 }
 .photoHeader{
     grid-area: photoHeader;
@@ -109,8 +109,8 @@ img.imgProfExp{
     grid-area: headerNavMenu;;
     height: 70px;
     background: #252d2f;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 .ulNav{
     float: right;
