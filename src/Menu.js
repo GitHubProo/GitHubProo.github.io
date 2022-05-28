@@ -4,7 +4,7 @@ import './App.css';
 const Menu = ({ items, active, setActive}) => {
     return (
         <div className={active ? "sideBarNav active" : "sideBarNav"} onClick={() => setActive(false)}>
-            <div className={"menuHeader"} onClick={e => e.stopPropagation()}>
+            <div className={"menuHeader"}>
             <ul className={"ulSideBar"}>
                 {items.map(item =>
                     <li>
@@ -18,3 +18,6 @@ const Menu = ({ items, active, setActive}) => {
 };
 
 export default Menu;
+
+/*At touch/click sideBar not disappear */
+/*<div className={"menuHeader"} onClick={e => e.stopPropagation()}>*/

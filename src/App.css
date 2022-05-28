@@ -45,22 +45,25 @@ img.imgProfExp{
     max-width: 1600px;
 }
 /*Лейба і кнопка на головному фото*/
+img.hundred{
+    width: 100%;
+
+}
+.photoHeader{
+    grid-area: photoHeader;
+    text-align: right;
+}
 .headerTextWeb {
     position: absolute;
     margin-left: 500px;
-    margin-top: 750px;
+    margin-top: 500px;
     width: 750px;
     height: 90px;
 }
-
-.contHeader{
-    grid-area: contHeader;
-    width: 1600px;
-}
 .buttonLearnMore {
     position: absolute;
-    margin-top: 900px;
-    margin-left: 750px;
+    margin-top: 650px;
+    margin-left: 800px;
     width: 186px;
     height: 56px;
     background: unset;
@@ -91,9 +94,6 @@ img.imgProfExp{
     color: white;
     font-family: "Arial";
     font-size: large;
-}
-.photoHeader{
-    grid-area: photoHeader;
 }
 /*Навігація*/
 .sideBarNav{

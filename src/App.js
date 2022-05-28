@@ -16,15 +16,17 @@ const App = () => {
     return (
         <div  className={"wrapper"}>
             <div id={"home"} className={"containerHome"}>
+
                 <div className={"photoHeader"}>
-                    <img src={"photoHeader.png"} className={"hundred"}/>
-                </div>
-               {/* <div className={"contHeader"}>
-                    <img  className={"headerTextWeb"} src={"HeaderWebDev.png"}/>
+                {/*<img  className={"headerTextWeb"} src={"HeaderWebDev.png"}/>
+                <a href={"#navMenu"}>
                     <button className={"buttonLearnMore"}>
                         <text className={"TextOnButtonLearnMore"}>LEARN MORE</text>
                     </button>
-                </div>*/}
+                </a>*/}
+                <img src={"photoHeader.png"} className={"hundred"}/>
+                </div>
+
                 <div id={"navMenu"} className={"headerNavMenu"}>
                     <div className={"headerLogo"}>
                         <img  className={"logoPhoto"} src={"logoPhoto.png"}/>
